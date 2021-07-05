@@ -1,0 +1,445 @@
+/**** Page d'accueil restaurant ****/
+
+body {
+  margin     : auto;
+  font-family: 'Roboto', sans-serif;
+  word-wrap  : break-word;
+}
+
+/**** Partie reservation et composition menu ****/
+/*** Logo presentation ***/
+
+.Ohmy_logo {
+  display        : flex;
+  flex-direction : row;
+  align-items    : center;
+  justify-content: center;
+  padding        : 1rem;
+  position       : relative;
+  box-shadow     : 0px -1px 6px 0px;
+}
+
+
+h1 {
+  font-family: Shrikhand, serif;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+ul {
+  padding      : 0;
+  list-style   : none;
+  counter-reset: numeroliste;
+}
+
+a {
+  text-decoration: none;
+  color          : black;
+}
+
+a:hover,
+a:active {
+  color: #9356DC;
+}
+
+button {
+  outline: 0;
+}
+
+.Zonerecherche {
+  background-color: #EAEAEA;
+  mix-blend-mode  : darken;
+  display         : flex;
+  justify-content : center;
+  padding         : 0.7em;
+}
+
+.Zonerecherche .fas {
+  margin-right: 1em;
+}
+
+.Zonerecherche_input {
+  cursor          : pointer;
+  background-color: #EAEAEA;
+  font-weight     : bold;
+  border          : none;
+}
+
+.Zonerecherche_input::placeholder {
+  color: black;
+}
+
+.Zonerecherche_input:focus {
+  outline: 0;
+}
+
+
+.btn_resto {
+  padding: 1em 1.4em 1em 1.4em;
+  background: linear-gradient(161deg, rgba(248, 91, 246, 0.07) 0%,
+      rgba(248, 91, 246, 0.07) 50%,
+      rgba(8, 8, 8, 0.03) 50%,
+      rgba(8, 8, 8, 0.03) 100%), linear-gradient(59deg,
+      rgba(245, 245, 245, 0.05) 0%, rgba(245, 245, 245, 0.05) 50%,
+      rgba(68, 68, 68, 0.05) 50%, rgba(68, 68, 68, 0.05) 100%), linear-gradient(286deg,
+      rgba(107, 107, 107, 0.07) 0%, rgba(107, 107, 107, 0.07) 50%, rgba(7, 7, 7, 0.07) 50%,
+      rgba(7, 7, 7, 0.07) 100%), linear-gradient(123deg, rgba(9, 9, 9, 0.09) 0%, rgba(9, 9, 9, 0.09) 50%,
+      rgba(120, 120, 120, 0.09) 50%, rgba(120, 120, 120, 0.09) 100%), linear-gradient(170deg,
+      rgba(202, 202, 202, 0.01) 0%, rgba(202, 202, 202, 0.01) 50%, rgba(19, 19, 19, 0.01) 50%,
+      rgba(19, 19, 19, 0.01) 100%), linear-gradient(210deg, rgba(64, 64, 64, 0.04) 0%, rgba(64, 64, 64, 0.04) 50%,
+      rgba(4, 4, 4, 0.04) 50%, rgba(4, 4, 4, 0.04) 100%), linear-gradient(90deg, rgb(249, 17, 190), rgb(100, 28, 213));
+  color        : white;
+  outline      : 0;
+  border-radius: 50px;
+  border       : none;
+  box-shadow   : 1px 3px 5px #dfdcdc;
+  font-weight  : bold;
+  cursor       : pointer;
+  margin-top   : 1em;
+  margin-bottom: 3.7em;
+}
+
+.btn_resto:hover,
+.btn_resto:active {
+  opacity   : 0.9;
+  box-shadow: 1px 3px 5px #696666;
+  background: linear-gradient(to bottom right, #fb9be0, #bc87fd);
+}
+
+/****Les menus a la carte ****/
+
+main {
+  background-color: #f6f6f6;
+  margin-top      : 4em;
+  padding-bottom  : 0.1em;
+}
+
+
+#Restos,
+.Productions,
+.Realisations,
+.lienfooter {
+
+  max-width: 1280px;
+  margin   : auto;
+}
+
+#Realisations {
+  background-color: #f6f6f6;
+  text-align      : center;
+  padding-left    : 10%;
+  padding-right   : 10%;
+}
+
+#Realisations h2 {
+  padding-top: 1.2em;
+  margin     : auto;
+  font-weight: bold;
+  width      : 80%;
+}
+
+.Realisations p {
+  margin-top : 15px;
+  color      : gray;
+  font-size  : 1em;
+  font-weight: 300;
+}
+
+/**** presentation des differents menu ****/
+
+#Restos ul {
+
+  display              : grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap                  : 35px;
+}
+
+
+#Restos li {
+  margin  : 1.3em;
+  position: relative;
+}
+
+.Productions h2 {
+  margin-top: 2.4em;
+}
+
+.Productions .fas {
+  color       : #7e7e7e;
+  margin-right: 1.6em;
+}
+
+.Productions li {
+  margin-right    : auto;
+  margin-left     : auto;
+  margin-bottom   : 1.3em;
+  padding         : 1.4em 2em 1.4em 2.4em;
+  text-align      : left;
+  max-width       : 100%;
+  background-color: #f6f6f6;
+  box-shadow      : 1px 5px 10px #dfdcdc;
+  border-radius   : 20px;
+  font-weight     : bold;
+  cursor          : pointer;
+}
+
+.Productions li:hover,
+.Realisations li:active {
+  background-color: #f5edff;
+  cursor          : pointer;
+}
+
+.Productions li:hover>.fas,
+.Realisations li:active>.fas {
+
+  color: #9356DC;
+}
+
+.Productions li::before {
+  position         : absolute;
+  padding          : 5px 9px 5px 9px;
+  counter-increment: numeroliste;
+  content          : counter(numeroliste);
+  background-color : #9356DC;
+  color            : white;
+  font-size        : 0.8em;
+  border-radius    : 50%;
+  margin-left      : -50px;
+}
+
+
+#Restos {
+  padding-top   : 1.5em;
+  padding-bottom: 2.5em;
+  position      : relative;
+  user-select   : none;
+  margin-bottom : 6em;
+}
+
+/*#Restos {
+  padding-top: 1.5em;
+  padding-bottom: 2.5em;
+  /*margin: 1.4em 1.4em 0 1.4em;*/
+/*position: relative;
+  user-select: none;
+}*/
+
+
+
+.Productions .menu-options {
+  margin: 1.3em;
+}
+
+/**** Presentation des types de formule ****/
+figcaption {
+  position        : absolute;
+  top             : 100%;
+  width           : 100%;
+  background-color: white;
+  display         : flex;
+  justify-content : space-between;
+  align-items     : center;
+  border-radius   : 0 0 22px 22px;
+  box-shadow      : 0 7px 8px #dfdcdc;
+}
+
+figcaption h4 {
+  margin-top   : 0.7em;
+  margin-bottom: 0.3em;
+  margin-left  : 1em;
+}
+
+figcaption p {
+  margin-top   : 0;
+  margin-bottom: 1.2em;
+  font-weight  : 300;
+  margin-left  : 1em;
+}
+
+.cartemenu {
+  position        : relative;
+  margin-left     : 0;
+  margin-right    : 0;
+  height          : 24vh;
+  background-color: white;
+  box-shadow      : 0 7px 8px #dfdcdc;
+  border-radius   : 22px;
+}
+
+.cartemenu_img {
+  position     : absolute;
+  width        : 100%;
+  height       : 100%;
+  border-radius: 17px 17px 0 0;
+  object-fit   : cover;
+}
+
+.cartemenu_img-corect1 {
+  object-position: 50% 100%;
+}
+
+.cartemenu_img-corect2 {
+  object-position: 50% 62%;
+}
+
+.cartemenu_img-corect3 {
+  object-position: 50% 100%;
+}
+
+.cartemenu_img-corect4 {
+  object-position: 50% 95%;
+}
+
+.cartemenu .tasgcoeur {
+  margin-right: 1em;
+}
+
+/**** Footer ****/
+
+footer {
+  padding         : 1em;
+  background-color: #353535;
+  color           : white;
+  text-align      : left;
+}
+
+footer h2 {
+  margin-top : 0.3em;
+  font-family: Shrikhand, serif;
+  font-size  : 1.2em;
+  font-weight: 100;
+}
+
+.lienfooter li {
+  padding-bottom: 1em;
+}
+
+.lienfooter a {
+  color: white;
+}
+
+.lienfooter a:hover,
+.lienfooter a:active {
+  color: #750254;
+}
+
+.lienfooter .fas {
+  width       : 20px;
+  margin-right: 10px;
+}
+
+
+
+
+/**** Mobiles smartphone ****/
+
+@media all and (min-width: 200px) and (max-width: 360px) {
+  .Productions li {
+    font-size: smaller;
+
+  }
+
+  #Restos ul {
+    display              : grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap                  : 35px;
+  }
+
+  .Productions li::before {
+    margin-left: -40px;
+  }
+}
+
+@media all and (min-width: 375px) and (max-width: 667px) {
+
+  #Restos ul {
+    display              : grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap                  : 35px;
+  }
+
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    #restos ul {
+      display              : grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap                  : 35px;
+    }
+
+    #restos li {
+      margin-bottom: 3em;
+    }
+
+    .cartemenu {
+      height: 16vh;
+    }
+
+    .cartemenu_img-1 {
+      height         : 133%;
+      object-position: center -45px;
+    }
+
+    .cartemenu_img-3 {
+      height         : 133%;
+      object-position: 20% -45px;
+    }
+  }
+
+
+  /* Surface */
+  @media screen and (min-width: 875px) {
+    #Realisations h2 {
+      width: 100%;
+    }
+
+    .Productions ul {
+      display        : flex;
+      justify-content: space-between;
+    }
+
+    .Productions ul li {
+      margin: 0;
+    }
+
+    #restos ul {
+      display              : grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap                  : 35px;
+    }
+
+    #restos li {
+      margin-bottom: 3em;
+    }
+
+    .cartemenu_img-1 {
+      height         : 135%;
+      object-position: center -80px;
+    }
+
+    .cartemenu_img-3 {
+      height         : 133%;
+      object-position: 20% -70px;
+    }
+
+  }
+
+  /* LARGE */
+  @media screen and (min-width: 1280px) {
+
+    .Productions {
+      margin: 1.3em;
+    }
+
+    #Restos,
+    .Realisations,
+    .infofooter {
+      max-width: 1000px;
+      margin   : auto;
+
+
+
+
+    }
+  }
+}
