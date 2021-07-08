@@ -1,0 +1,441 @@
+/******** Carte menu A la française ********/
+/**** Page d'accueil restaurant ****/
+body {
+
+  font-family: "Roboto", serif;
+}
+
+
+@keyframes menuanmt {
+  from {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes rondbattement {
+  from {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.2);
+    transform: rotate(-0.5turn);
+    opacity: 0;
+  }
+}
+@keyframes loading-disparition {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+
+.headermenu {
+  position  : relative;
+  margin-top: 20px;
+  display   : flex;
+}
+
+.headermenu .fas {
+  position   : absolute;
+  top        : 0.6em;
+  margin-left: 1.5em;
+  font-size  : 1.3em;
+  color      : black;
+}
+
+.headermenu h1 {
+  max-width: 100%;
+  margin   : auto;
+
+}
+
+.logo a {
+  text-decoration: none;
+  color          : black;
+  font-family    : "Shrikhand", cursive;
+}
+
+.photoentete {
+  margin: 0;
+}
+
+.photoentete {
+  max-width      : 100%;
+  min-width      : 100%;
+  object-fit     : cover;
+  object-position: 50% 60%;
+  height         : 40vh;
+  border-radius  : 15px;
+}
+
+.photoentete_img {
+  object-position: 50% 50%;
+}
+
+.photoentete-ajust1 {
+  width          : 100%;
+  object-fit     : cover;
+  object-position: 50% 51%;
+  height         : 40vh;
+  border-radius  : 15px;
+}
+
+.photoentete-ajust2 {
+  width          : 100%;
+  object-fit     : cover;
+  object-position: 30% 65%;
+  height         : 40vh;
+  border-radius  : 15px;
+}
+
+.photoentete-ajust3 {
+  width          : 100%;
+  object-fit     : cover;
+  object-position: 30% 62%;
+  height         : 40vh;
+  border-radius  : 15px;
+}
+
+
+/******** Menu restaurant ********/
+
+.mainmenu {
+  position        : relative;
+  max-width       : 1350px;
+  background-color: #f6f6f6;
+  border-radius   : 40px 40px 0 0;
+  margin-left     : auto;
+  margin-right    : auto;
+  margin-top      : -55px;
+}
+
+.menu {
+  display: block;
+}
+
+.menu_titre,
+.menu .carte {
+  padding-left : 1.4em;
+  padding-right: 1.4em;
+  padding-top  : 0.5em;
+}
+
+.menu_titre {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+}
+
+.carte_titre {
+  margin-bottom : 1.3rem;
+  text-transform: uppercase;
+  font-weight   : 400;
+  color         : #444444;
+
+}
+
+.menu_titre h2 {
+  font-family: "Shrikhand", cursive;
+  font-size  : 1.8em;
+  font-weight: 100;
+}
+
+.carte_titre {
+  border-bottom : 0.2rem solid #99E2D0;
+  width         : 2.5rem;
+  text-transform: uppercase;
+  margin        : 0.5rem 0.5rem;
+  padding-bottom: 0.2rem;
+}
+
+
+
+.carte_detail {
+  height          : 75px;
+  margin-bottom   : 1em;
+  background-color: white;
+  display         : flex;
+  border-radius   : 18px;
+  box-shadow      : 0 7px 8px #dfdcdc;
+  overflow        : hidden;
+  cursor          : pointer;
+}
+
+.carte_detail-anmt1 {
+  animation: menuanmt 1s ease-out;
+  opacity  : 1;
+}
+
+.carte_prix {
+  margin-right   : -20px;
+  display        : flex;
+  align-items    : flex-end;
+  justify-content: flex-end;
+  font-weight    : roboto;
+  transform      : translateX(120%);
+  transition     : 0.6s;
+}
+
+
+.carte_adapter {
+  height          : 100%;
+  width           : 9.5em;
+  border          : none;
+  background-color: #99E2D0;
+  cursor          : pointer;
+  transform       : translateX(102%);
+  transition      : 0.8s
+}
+
+
+.carte_detail:hover .carte_prix,
+.carte_detail:active .carte_prix {
+  transform  : translateX(-130%);
+  margin-left: 30px;
+}
+
+.carte_detail:hover .fas,
+.carte_detail:active .fas {
+  transform : rotate(-360deg);
+  transition: 0.7s ease-in-out;
+}
+
+.carte_infos {
+  width       : 170%;
+  padding-left: 0.7em;
+  overflow    : hidden;
+}
+
+.carte_infos h4 {
+  margin-bottom: 0.3em;
+  margin-top   : 0.8em;
+}
+
+.carte_detail:hover>.carte_adapter,
+.carte_detail:active>.carte_adapter {
+  transform: translateX(0%);
+}
+
+.carte_adapter .fas {
+  color    : white;
+  font-size: 2em;
+}
+
+.carte_infos p {
+  margin-top: 0;
+  font-size : 400;
+}
+
+/**** Bouton de validation ****/
+
+.toper {
+  display        : flex;
+  justify-content: center;
+
+}
+
+.btndegrade {
+  background   : linear-gradient(to bottom right, #e67ddd, #9356DC);
+  color        : #dfdcdc;
+  border       : none;
+  padding      : 15px 50px;
+  border-radius: 100px;
+  font-weight  : bold;
+  font-family  : "Raleway", "Sans serif";
+  font-size    : 1em;
+  cursor       : pointer;
+  margin       : 0 -50px;
+  margin-top   : 2.7em;
+  margin-bottom: 3.7em;
+}
+
+.btndegrade:hover,
+.btndegrade:active {
+  opacity   : 0.9;
+  box-shadow: 1px 3px 5px #696666;
+}
+
+.tagscoeur {
+  /*position: relative;*/
+  right: -256px;
+  bottom: 35px;
+  opacity: 1;
+  height: 23px;
+  width: 25px;
+  transition-duration: 0.5s;
+  fill: transparent;
+  stroke: #000000;
+  stroke-width: 50px;
+}
+
+.tagscoeur:hover {
+  opacity     : 1;
+  height      : 24px;
+  width       : 25px;
+  fill        : url(#myGradient);
+  stroke-width: 0px;
+  cursor      : pointer;
+}
+
+
+/**** Menu footer ****/
+
+.infofooter_list {
+  display       : flex;
+  flex-direction: column;
+  padding       : 0.9em;
+}
+
+.infofooter {
+  padding         : 1em;
+  background-color: #353535;
+  color           : white;
+  text-align      : left;
+  border-radius   : 10px;
+}
+
+.infofooter h2 {
+  margin-top : 0.3em;
+  font-family: Shrikhand, serif;
+  font-size  : 1.1em;
+  font-weight: 0.2em;
+  margin     : 0.6em;
+}
+
+.infofooter li {
+  padding-bottom: 1em;
+  list-style    : none;
+}
+
+.infofooter a {
+  color          : white;
+  text-decoration: none;
+}
+
+.infofooter a:hover,
+.infofooter a:active {
+  color: #715168;
+}
+
+.infofooter .fas {
+  width       : 20px;
+  margin-right: 10px;
+}
+
+.infofooter_list,
+.logofooter {
+
+  max-width : 1350px;
+  margin    : auto;
+  list-style: none;
+  cursor    : pointer;
+}
+
+
+
+  /* Animation cartes menus */
+
+  .carte_detail-anmt1 {
+    animation: menuanmt 1s ease-out;
+    opacity: 1;
+  }
+  .carte_detail-anmt2 {
+    animation: menuanmt 1s 0.2s ease-out;
+    opacity: 1;
+  }
+  .carte_detail-anmt3 {
+    animation: menuanmt 1s 0.3s ease-out;
+    opacity: 1;
+  }
+  .carte_detail-anmt4 {
+    animation: menuanmt 1s 0.4s ease-out;
+    opacity: 1;
+  }
+  
+  .carte_infos {
+    width: 150%;
+    padding-left: 0.7em;
+    overflow: hidden;
+  }
+  .carte_infos p, .carte_infos h4 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .carte_infos h4 {
+    margin-bottom: 0.3em;
+    margin-top: 0.8em;
+    font-weight: 500;
+    font-size: 1.1em;
+  }
+  .carte_infos p {
+    margin-top: 0;
+    font-size: 0.95em;
+    font-weight: 300;
+  }
+  
+  .carte_prix {
+    margin-right: -20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-weight: bold;
+    transform: translateX(120%);
+    transition: 0.6s;
+  }
+  
+  .carte_adapter {
+    height: 100%;
+    width: 9.5em;
+    border: none;
+    background-color: #99E2D0;
+    cursor: pointer;
+    transform: translateX(101%);
+    transition: 0.6s;
+  }
+  .carte_adapter .fas {
+    color: white;
+    font-size: 2em;
+  }
+
+/******** MEDIA QUERIES - PAGE MENU ********/
+
+/**** Mobiles ****/
+@media all and (min-width: 300px) and (max-width: 568px) {
+  .menu_titre h2 {
+    font-size: 1.4em;
+  }
+
+  .carte_prix {
+    transform: translateX(90%);
+  }
+}
+
+/**** Surfaces ****/
+@media screen and (min-width: 930px) {
+  .menu {
+    display              : grid;
+    grid-template-columns: repeat(3, 33.2%);
+
+  }
+}
+
+/**** Desktop ****/
+@media screen and (min-width: 1200px) {
+  .mainmenu {
+    position    : relative;
+    max-width   : 1350px;
+    margin-left : auto;
+    margin-right: auto;
+    margin-top  : -55px;
+  }
+}
+
