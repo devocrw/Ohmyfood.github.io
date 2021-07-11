@@ -264,16 +264,13 @@ body {
 }
 
 .tagscoeur {
-  /*position: relative;*/
-  right: -256px;
-  bottom: 35px;
   opacity: 1;
-  height: 23px;
-  width: 25px;
+  height: 20px;
+  width: 23px;
   transition-duration: 0.5s;
   fill: transparent;
   stroke: #000000;
-  stroke-width: 50px;
+  stroke-width: 30px;
 }
 
 .tagscoeur:hover {
@@ -339,6 +336,9 @@ body {
   cursor    : pointer;
 }
 
+.logofooter h2 {
+  margin: 2em;
+}
 
 
   /* Animation cartes menus */
