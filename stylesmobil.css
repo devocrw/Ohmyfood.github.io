@@ -39,13 +39,11 @@ body {
   height         : 100%;
   width          : 100%;
   padding-bottom : 20px;
-  margin-top     : -30px;
   background     : rgb(255, 255, 255);
   font-family    : Shrikhand, serif;
   font-size      : 0.6em;
   display        : flex;
-  flex-direction : column;
-  justify-content: center;
+ justify-content: center;
   align-items    : center;
   animation      : loading-disparition 0.5s 3s ease-in forwards;
 }
@@ -94,7 +92,7 @@ h3 {
 }
 
 ul {
-  padding      : 0;
+    padding      : 0;
   list-style   : none;
   counter-reset: numeroliste;
 }
@@ -245,7 +243,7 @@ main {
   margin-right    : auto;
   margin-left     : auto;
   margin-bottom   : 1.3em;
-  padding         : 1.4em 2em 1.4em 2.4em;
+  padding         : 1.4em 1.4em 1.4em 2.4em;
   text-align      : left;
   max-width       : 100%;
   background-color: #f6f6f6;
@@ -439,7 +437,7 @@ footer h2 {
 
 /**** Mobiles smartphone ****/
 
-@media all and (min-width: 200px) and (max-width: 360px) {
+@media all and (min-width: 200px) and (max-width: 300px) {
   .Productions li {
     font-size: smaller;
 
@@ -456,12 +454,13 @@ footer h2 {
   }
 }
 
-@media all and (min-width: 375px) and (max-width: 667px) {
+@media all and (min-width: 301px) and (max-width: 667px) {
 
   #Restos ul {
     display              : grid;
     grid-template-columns: repeat(1, 1fr);
     gap                  : 35px;
+    padding              : 1.4em 1.4em 1.4em 2.4em;
   }
 
   @media all and (min-width: 768px) and (max-width: 1024px) {
